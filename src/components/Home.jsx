@@ -1,10 +1,26 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, animate } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import { BsArrowUpRight, BsChevronDown } from "react-icons/bs";
 import me from "../assets/logo.jpg";
 
 const Home = ({ ratio }) => {
+
+  const problemsCount = useRef(null);
+  const projectCount = useRef(null);
+
+  const animationProblemsCount = () => {
+    animate(0, 1500, {
+      duration: 1,
+      onUpdate: (v) => (problemsCount.current.textContent = v.toFixed()),
+    });
+  };
+  const animationProjectsCount = () => {
+    animate(0, 100, {
+      duration: 1,
+      onUpdate: (v) => (projectCount.current.textContent = v.toFixed()),
+    });
+  };
 
   const animations = {
     h1: {
@@ -47,15 +63,23 @@ const Home = ({ ratio }) => {
           />
 
           <div>
-            <a href="mailto:official.6packprogrammer@gmail.com">Hire Me</a>
-            <a href="">
+            <a href="mailto:official.chaudharyanshirsingh2050@gmail.com">Hire Me</a>
+            <a href="https://drive.google.com/file/d/1t4L5KnodhtyhGGLwbmxsmNs8-QuG5TbL/view?usp=sharing" target="blank">
               Resume <BsArrowUpRight />
             </a>
           </div>
 
           <article>
             <p>
-              +1500
+              +
+              {
+                <motion.span
+                  whileInView={animationProblemsCount}
+                  ref={problemsCount}
+                >
+                  1500
+                </motion.span>
+              }
             </p>
             <span>DSA Problems Solved</span>
           </article>
@@ -63,7 +87,15 @@ const Home = ({ ratio }) => {
           <aside>
             <article>
               <p>
-                +100
+                +
+                {
+                  <motion.span
+                    ref={projectCount}
+                    whileInView={animationProjectsCount}
+                  >
+                    100
+                  </motion.span>
+                }
               </p>
               <span>Projects Done</span>
             </article>
