@@ -3,38 +3,43 @@ import React from "react";
 const Testimonial = () => {
   return (
     <div id="testimonial">
-      <h2>Testimonial</h2>
+      <h2>Experience</h2>
 
       <section>
-        <TestimonialCard
-          name={"Anshir"}
-          feedback={"Your Problem Solving skills are so good."}
+        <ExperienceCard
+          name={"Appfoster"}
+          role={"Associate Software Engineer(May 2023 - Dec 2023)"}
+          techs={"HTML, CSS, Laravel, ReactJS, NodeJs, Core PHP, JavaScript(JQuery), PHTML, Ajax, CSS, Docker, MariaDB"}
         />
 
-        <TestimonialCard
-          name={"Ramzi"}
-          feedback={
-            "Wow what a portfolio, doesn't expected this to be on youtube!"
-          }
+        <ExperienceCard
+          name={"DesiQnA"}
+          role={"SDE Intern(Oct 2022 - Dec 2022)"}
+          techs={"HTML, CSS, JavaScript, PHP, MySQL"}
         />
 
-        <TestimonialCard
-          name={"Sundar Pichai"}
-          feedback={"Amazing seems like you should the Google CEO"}
+        <ExperienceCard
+          name={"NIIT"}
+          role={"SDE Intern(Mar 2022 - June 2022)"}
+          techs={"HTML, CSS, JavaScript, PHP, MySQL, Ajax, JIRA, SVN, Confluence, FileZilla, Putty, and AWS-buckets"}
         />
       </section>
     </div>
   );
 };
 
-const TestimonialCard = ({ name, feedback }) => (
+const ExperienceCard = ({ name, role, techs }) => (
   <article>
     <img
-      src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
-      alt="User"
+      src="https://cdn-icons-png.flaticon.com/512/4192/4192708.png"
+      alt={name}
     />
-    <h4>{name}</h4>
-    <p>{feedback}</p>
+    <div>
+      <h4>{name}</h4>
+      <i>{techs}</i>
+      <p>{role}</p>
+    </div>
+    
   </article>
 );
 

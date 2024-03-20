@@ -6,11 +6,10 @@ import data from "../assets/data.json";
 const Work = () => {
   return (
     <div id='work'>
-      <h2>WORK</h2>
+      <h2>PROJECTS</h2>
       <section>
         <article>
           <Carousel
-            showArrows={false}
             showIndicators={false}
             showStatus={false}
             showThumbs={false}

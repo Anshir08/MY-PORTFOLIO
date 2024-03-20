@@ -2,10 +2,11 @@ import React from 'react'
 import logo from "../assets/logo.jpg"
 import {
   AiFillGithub,
-  AiFillInstagram,
-  AiFillYoutube,
   AiOutlineArrowUp,
 } from "react-icons/ai";
+import { SiLeetcode } from "react-icons/si";
+import { FaGithub } from "react-icons/fa";
+import { FaHackerrank } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -21,17 +22,17 @@ const Footer = () => {
       </div>
 
       <aside>
-        <h2>Social Media</h2>
+        <h2>Coding Profiles</h2>
 
         <article>
-          <a href="https://youtube.com" target={"blank"}>
-            <AiFillYoutube />
+          <a href="https://github.com/Anshir08" target={"blank"}>
+            <FaGithub />
           </a>
-          <a href="https://instagram.com" target={"blank"}>
-            <AiFillInstagram />
+          <a href="https://leetcode.com/Tensor08" target={"blank"} style={{margin:"1rem 0"}}>
+            <SiLeetcode />
           </a>
-          <a href="https://github.com" target={"blank"}>
-            <AiFillGithub />
+          <a href="https://www.hackerrank.com/profile/Anshir2050" target={"blank"}>
+            <FaHackerrank />
           </a>
         </article>
       </aside>
