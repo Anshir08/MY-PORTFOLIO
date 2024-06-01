@@ -8,7 +8,7 @@ const Testimonial = () => {
       <section>
         <ExperienceCard
           name={"Appfoster"}
-          role={"Associate Software Engineer(May 2023 - Dec 2023)"}
+          role={"Associate Software Engineer(May 2023 - Apr 2024)"}
           techs={"HTML, CSS, Laravel, ReactJS, NodeJs, Core PHP, JavaScript(JQuery), PHTML, Ajax, CSS, Docker, MariaDB"}
         />
 
