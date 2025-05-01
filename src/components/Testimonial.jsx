@@ -7,28 +7,30 @@ const Testimonial = () => {
 
       <section>
         <ExperienceCard
+          name={"AVP Web Solutions"}
+          role={"Software Developer(Dec 2023 - Present)"}
+        />
+
+        <ExperienceCard
           name={"Appfoster"}
-          role={"Associate Software Engineer(May 2023 - Apr 2024)"}
-          techs={"HTML, CSS, Laravel, ReactJS, NodeJs, Core PHP, JavaScript(JQuery), PHTML, Ajax, CSS, Docker, MariaDB"}
+          role={"Associate Software Engineer(Dec 2022 - Dec 2023)"}
         />
 
         <ExperienceCard
           name={"DesiQnA"}
-          role={"SDE Intern(Oct 2022 - Dec 2022)"}
-          techs={"HTML, CSS, JavaScript, PHP, MySQL"}
+          role={"SDE Intern(Sep 2022 - Nov 2022)"}
         />
 
         <ExperienceCard
           name={"NIIT"}
-          role={"SDE Intern(Mar 2022 - June 2022)"}
-          techs={"HTML, CSS, JavaScript, PHP, MySQL, Ajax, JIRA, SVN, Confluence, FileZilla, Putty, and AWS-buckets"}
+          role={"SDE Intern(Mar 2022 - Aug 2022)"}
         />
       </section>
     </div>
   );
 };
 
-const ExperienceCard = ({ name, role, techs }) => (
+const ExperienceCard = ({ name, role }) => (
   <article>
     <img
       src="https://cdn-icons-png.flaticon.com/512/4192/4192708.png"
@@ -36,8 +38,7 @@ const ExperienceCard = ({ name, role, techs }) => (
     />
     <div>
       <h4>{name}</h4>
-      <i>{techs}</i>
-      <p>{role}</p>
+      <i>{role}</i>
     </div>
     
   </article>
