@@ -1,7 +1,6 @@
 import React from 'react'
 import logo from "../assets/logo.jpg"
 import {
-  AiFillGithub,
   AiOutlineArrowUp,
 } from "react-icons/ai";
 import { SiLeetcode } from "react-icons/si";
